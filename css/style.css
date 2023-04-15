@@ -1,0 +1,131 @@
+body {
+  min-height: 2000px;
+}
+
+.jumbotron {
+  padding-top: 4rem;
+  background-color: #8aaa79;
+}
+
+#about {
+  background-color: #f3f4f5;
+}
+
+/* Timeline ID Work */
+#work {
+  background-color: #8aaa79;
+}
+
+.timeline {
+  position: relative;
+}
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: #f3f4f5;
+  top: 0;
+  left: 50%;
+  margin-left: -2px;
+  clear: both;
+  z-index: 0;
+}
+
+.cn-tl {
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+}
+
+.lf-cn-tl {
+  left: 0;
+}
+.rg-cn-tl {
+  left: 50%;
+}
+
+.lf-cn-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 17px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #f3f4f5;
+  right: -14px;
+}
+.rg-cn-arrow {
+  rotate: 180deg;
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 17px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #f3f4f5;
+  left: -14px;
+}
+
+.cn-dot {
+  position: absolute;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  background-color: #f3f4f5;
+  right: -10px;
+  top: 32px;
+  z-index: 10;
+}
+
+.rg-cn-tl .cn-dot {
+  left: -10px;
+}
+
+.text-box {
+  padding: 20px 30px;
+  background-color: #f3f4f5;
+  position: relative;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* Responsive Timeline */
+@media screen and (max-width: 600px) {
+  .timeline {
+    margin: auto;
+  }
+  .timeline::after {
+    left: 31px;
+  }
+  .cn-tl {
+    width: 100%;
+    padding-right: 25px;
+    padding-left: 80px;
+  }
+  .text-box {
+    font-size: 13px;
+  }
+  .rg-cn-tl {
+    left: 0;
+  }
+  .lf-cn-tl .cn-dot,
+  .rg-cn-tl .cn-dot {
+    left: 21px;
+  }
+  .lf-cn-arrow,
+  .rg-cn-arrow {
+    border-right: 15px solid #f3f4f5;
+    border-left: 0;
+    left: -14px;
+  }
+  .rg-cn-arrow {
+    rotate: 0deg;
+  }
+}
+
+/* End of Timeline Works */
+
+/*  */
